@@ -1,0 +1,105 @@
+@import "../../assets/style/variabless";
+@import "../../assets/style/fonts";
+@import "../../assets/style/mixin";
+
+
+.employment-history-section {
+  margin-top: 20px;
+  font-family: $Regular;
+  color: $tiffany;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .employer {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="tel"],
+      input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .contact-radio {
+        display: flex;
+        gap: 15px;
+
+        label {
+          display: flex;
+          align-items: center;
+
+          input[type="radio"] {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  // Media Queries for Responsiveness
+  @include screen-max-width-767 {
+    h2 {
+      font-size: 20px;
+    }
+
+    .employer {
+      h3 {
+        font-size: 18px;
+      }
+
+      .form-group {
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"] {
+          font-size: 14px;  // Smaller font size for inputs
+        }
+      }
+    }
+  }
+
+  @include screen-max-width-320 {
+    h2 {
+      font-size: 18px;
+    }
+
+    .employer {
+      h3 {
+        font-size: 16px;
+      }
+
+      .form-group {
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"] {
+          font-size: 12px;  // Further reduce input font size
+          padding: 8px;  // Smaller padding
+        }
+      }
+    }
+  }
+}

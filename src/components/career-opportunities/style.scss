@@ -1,0 +1,65 @@
+@import "../../assets/style/variabless";
+@import "../../assets/style/fonts";
+@import "../../assets/style/mixin";
+
+
+.P-career-wrapper {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-family: $Regular;
+
+  .career-title{
+    font-size: 95px;
+    font-weight: 700;
+    padding-bottom: 40px;
+    color:#999999;
+    @include screen-max-width-576{
+      font-size: 60px;
+    }
+
+    @include screen-max-width-320{
+      font-size: 50px;
+    }
+  }
+
+
+.career-blocks {
+  border-top: 1px solid #999999;
+  padding-top: 80px;
+
+  .career-block {
+    width: 31.5%;
+    height: 450px;
+    margin: 20px 0;
+
+    @include screen-max-width-991 {
+      width: 48%;
+      margin: 10px 0;
+    }
+    @include screen-max-width-767 {
+      width: 100%;
+    }
+
+    .career-image-cont {
+      height: 340px;
+      width: 100%;
+    }
+
+    .career-desc {
+      padding-top: 50px;
+      font-size: $font-size-26;
+      font-weight: 500;
+      line-height: 30px;
+      color: $tiffany;
+      font-style: normal;
+      @include screen-max-width-991 {
+        font-size: $font-size-20;
+      }
+      @include screen-max-width-767 {
+        font-size: $font-size-18;
+      }
+
+    }
+  }
+}
+  }

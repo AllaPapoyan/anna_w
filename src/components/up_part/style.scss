@@ -1,0 +1,22 @@
+@import "../../assets/style/variabless";
+@import "../../assets/style/fonts";
+@import "../../assets/style/mixin";
+
+
+.up-part{
+  background-color:#f5f5f5 ;
+  color: $tiffany;
+  //height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include screen-max-width-991{
+    display:none;
+  }
+}
+
+
+
+
+

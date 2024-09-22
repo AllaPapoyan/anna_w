@@ -1,0 +1,154 @@
+@import "../../assets/style/variabless";
+@import "../../assets/style/fonts";
+@import "../../assets/style/mixin";
+
+
+.references-section {
+  margin-top: 20px;
+  font-family: $Regular;
+  color: $tiffany;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .reference {
+    width: 900px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .additional-skills {
+    margin-top: 20px;
+
+    textarea {
+      width: 900px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  }
+
+  .resume-upload {
+    margin-top: 20px;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="file"] {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    span {
+      display: block;
+      margin-top: 5px;
+      color: #666;  // Placeholder for file not selected
+    }
+  }
+
+  // Media Queries for Responsiveness
+  @include screen-max-width-767 {
+    h2 {
+      font-size: 20px;
+    }
+
+    .reference {
+      h3 {
+        font-size: 18px;
+      }
+
+      .form-group {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          font-size: 14px;  // Smaller font size for inputs
+        }
+      }
+    }
+
+    .additional-skills {
+
+      textarea {
+        font-size: 14px;  // Smaller font size for textarea
+      }
+    }
+
+    .resume-upload {
+      input[type="file"] {
+        font-size: 14px;  // Smaller font size for file input
+      }
+    }
+  }
+
+  @include screen-max-width-320 {
+    h2 {
+      font-size: 18px;
+    }
+
+    .reference {
+      h3 {
+        font-size: 16px;
+      }
+
+      .form-group {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          font-size: 12px;  // Further reduce input font size
+          padding: 8px;  // Smaller padding
+        }
+      }
+
+      .additional-skills {
+
+        textarea {
+          font-size: 12px;  // Further reduce textarea font size
+
+        }
+      }
+
+      .resume-upload {
+        input[type="file"] {
+          font-size: 12px;  // Further reduce font size for file input
+        }
+      }
+    }
+  }
+}

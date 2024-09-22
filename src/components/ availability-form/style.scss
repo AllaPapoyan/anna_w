@@ -1,0 +1,122 @@
+@import "../../assets/style/variabless";
+@import "../../assets/style/fonts";
+@import "../../assets/style/mixin";
+
+.availability-section {
+  margin-top: 20px;
+  font-family: $Regular;
+  color: $tiffany;
+  flex-direction: column;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .availability-container {
+    padding: 20px;
+    width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .availability-days,
+    .shift-location-preferences {
+      margin-bottom: 20px;
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .days-checkbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        label {
+          display: flex;
+          align-items: center;
+
+          input[type="checkbox"] {
+            margin-right: 8px;
+          }
+        }
+      }
+
+      .locations-radio {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          input[type="radio"] {
+            margin-right: 8px;
+          }
+        }
+
+        input[type="text"] {
+          margin-top: 5px;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 100%;  // Full width for text input
+        }
+      }
+    }
+  }
+
+  // Media Queries for Responsiveness
+  @include screen-max-width-767 {
+    h2 {
+      font-size: 20px;
+    }
+
+    .availability-container {
+      padding: 15px;
+
+      .days-checkbox {
+        flex-direction: column;  // Stack checkboxes vertically
+      }
+
+      .locations-radio {
+        flex-direction: column;  // Stack radio buttons vertically
+      }
+    }
+  }
+
+  @include screen-max-width-320 {
+    h2 {
+      font-size: 18px;
+    }
+
+    .availability-container {
+      padding: 10px;
+
+      .days-checkbox {
+        label {
+          font-size: 14px;  // Smaller font size for labels
+        }
+      }
+
+      .locations-radio {
+        label {
+          font-size: 14px;  // Smaller font size for labels
+        }
+
+        input[type="text"] {
+          padding: 6px;  // Smaller padding for text input
+          font-size: 14px;  // Smaller font size for input
+        }
+      }
+    }
+  }
+}
+
+

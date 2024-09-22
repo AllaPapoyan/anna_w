@@ -1,0 +1,30 @@
+@import "../../assets/style/variabless";
+@import "../../assets/style/fonts";
+@import "../../assets/style/mixin";
+
+.form-component {
+  .submit-button {
+    margin-top: 20px;
+    text-align: start;
+
+    button {
+      padding: 10px 20px;
+      background-color: $tiffany; // Use your defined color variable
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($tiffany, 10%); // Darken color on hover
+      }
+
+      &:disabled {
+        background-color: #ccc; // Grey out when disabled
+        cursor: not-allowed;
+      }
+    }
+  }
+}

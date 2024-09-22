@@ -1,0 +1,35 @@
+@import "../../assets/style/variabless.scss";
+@import "../../assets/style/mixin.scss";
+
+.P-icons {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+
+    span{
+      background-color: $tiffany;
+      width: 18px;
+      height: 18px;
+
+    }
+  p{
+    font-size: 18px;
+    font-weight: lighter;
+  }
+
+    
+    .phone {
+      font-size: 10px;
+       
+      @include screen-max-width-767 {
+        font-size: 16px;
+      }
+
+      @include screen-max-width-576 {
+        font-size: 13px;
+      }
+    }
+  }
